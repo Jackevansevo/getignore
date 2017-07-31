@@ -18,7 +18,7 @@ setup(
     description='Command line utility to download common .gitignore files',
     long_description=long_description,
 
-    url='https://github.com/pypa/sampleproject',
+    url='https://github.com/Jackevansevo/getignore',
 
     author='Jack Evans',
     author_email='jack@evans.gb.net',
