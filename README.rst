@@ -4,21 +4,27 @@ Getignorer
 
 Command line utility to fetch common .gitignore files
 
+Installation
+============
+
+Install through PyPi::
+
+    λ pip install getignore
 
 Usage
 =====
 
 Enter a variable number of language to create the .gitignore file from::
 
-    λ getignorer Python Haskell
+    λ getignore Python Haskell
 
 Output location can be change with -o (default is .gitignore)::
 
-    λ getignorer Python -o sample.txt
+    λ getignore Python -o sample.txt
 
 Output can be previewed with --preview::
 
-    λ getignorer --preview
+    λ getignore --preview
 
 Omitting languages from the command will show a prompt::
 
@@ -31,4 +37,4 @@ Omitting languages from the command will show a prompt::
 
 For a full rundown of available options::
 
-    λ getignorer --help
+    λ getignore --help
