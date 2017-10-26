@@ -6,6 +6,7 @@ from collections import namedtuple
 from io import BytesIO
 from itertools import cycle
 from operator import attrgetter
+from shutil import which
 from urllib.error import HTTPError, URLError
 from urllib.request import urlopen, urlretrieve
 
@@ -84,7 +85,8 @@ class LanguageValidator(Validator):
 
 def prompt_for_languages():
     # Temporary disable cursor (for progress spinner)
-    os.system('setterm -cursor off')
+    if which('setterm'):
+        os.system('setterm -cursor off')
     try:
         fname, headers = urlretrieve(github_api_url, reporthook=show_progress)
     except HTTPError:
@@ -107,14 +109,15 @@ def prompt_for_languages():
                     completer=completer,
                     validator=validator
                 )
-            except EOFError:
+            except (EOFError, KeyboardInterrupt):
                 sys.exit('Exiting')
             else:
                 languages = [choice.strip() for choice in selected.split(',')]
                 return [url for url in urls if url.language in languages]
     finally:
         # Re enable cursor
-        os.system('setterm -cursor on')
+        if which('setterm'):
+            os.system('setterm -cursor on')
 
 
 def main():
