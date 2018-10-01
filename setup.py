@@ -9,7 +9,7 @@ def readme():
 
 setup(
     name="getignore",
-    version="2.0.0",
+    version="2.0.1",
     description="Command line utility to download common .gitignore files",
     long_description=readme(),
     classifiers=[
