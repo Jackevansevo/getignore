@@ -1,6 +1,6 @@
-==========
-Getignorer
-==========
+=========
+Getignore
+=========
 
 Command line utility to fetch common .gitignore files
 
