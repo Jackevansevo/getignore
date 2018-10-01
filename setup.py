@@ -23,4 +23,5 @@ setup(
     author_email="jack@evans.gb.net",
     license="MIT",
     entry_points={"console_scripts": ["getignore=getignore:main"]},
+    py_modules=["anyprint"],
 )
