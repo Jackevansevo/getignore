@@ -26,14 +26,9 @@ Output can be previewed with --preview::
 
     λ getignore --preview
 
-Omitting languages from the command will show a prompt::
+View all available gitignore templates with --list::
 
-    λ getignore        
-    Enter programing languages separated by commas in the prompt below
-        Press <TAB> to see available completions
-        E.g. Python, Go, Node
-
-    Enter languages >   
+    λ getignore --list
 
 For a full rundown of available options::
 
